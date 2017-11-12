@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 import './uikit.css';
-import PrimaryBtn from './components/primary-btn';
-import DefaultBtn from './components/default-btn';
-import SuccessBtn from './components/success-btn';
-import DangerBtn from './components/danger-btn';
+import './index.css';
 import SearchBar from './components/search-bar';
-import Card from './components/card';
+import CardsHolder from './components/cardsHolder'
 import Header from './components/header';
-import InputSumForm from './components/inputSumForm';
-import RegistrationForm from './components/registrationForm';
-import CardInfo from './components/card-info';
-import LoginForm from './components/loginForm';
+
+const data = new Array(9).fill(1).map((x, i) => ({
+  // image: require('./images/default-image-for-lot.png'),
+  name: 'lot ' + i,
+  price: 1,
+  timeTillEnd: i*10+':'+i*10
+}))
 
 class App extends Component {
   render() {
@@ -19,7 +19,9 @@ class App extends Component {
       <div className="App">
         <header>
           <Header/>
+          <SearchBar/>
         </header>
+        <CardsHolder data = {data}/>
       </div>
     );
   }

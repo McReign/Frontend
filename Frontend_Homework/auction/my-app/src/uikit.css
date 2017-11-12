@@ -1862,7 +1862,6 @@ select.uk-form-width-xsmall {
   font: inherit;
   color: inherit;
   cursor: pointer;
-  min-width: 120px;
   max-height: 40px;
   /* 5 */
   text-transform: none;
@@ -3533,7 +3532,7 @@ select.uk-form-width-xsmall {
   overflow: visible;
   /* 4 */
   font: inherit;
-  color: inherit;
+  color: #666;
   /* 5 */
   text-transform: none;
   /* 6. */
@@ -12235,72 +12234,8 @@ td.uk-text-break {
   }
 }
 
-.header-item {
-  background-color: #1e87f0;
-  width: 100%;
-  height: 80px;
-  padding: 0 40px;
-  vertical-align: center;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: flex-end;
-}
 
-.header-item .uk-button-default {
-  color: #fff;
-}
-
-
-.full-description {
-  display: flex;
-  flex-direction: row;  
-  max-width: 60%;
-}
-
-.center-container {
-  width: 70%;
-  padding: 30px;
-  display: flex;
-  justify-content:center;
-  box-sizing: border-box;
-  margin: 10px auto 0;
-}
-
-.lot-description {
-  padding: 0 20px;
-  min-width:35%;
-}
-
-.info p span {
-  font-weight: bold;
-}
-
-.info {
-  text-align: center;
-  padding: 52px 0 0 20px;
-  min-width: 25%;
-}
-
-.uk-card .head-item {
-  position: relative;
-  top: -22px;
-  background-color: #1e87f0;
-  max-width:120px;
-  margin:0 auto;
-  padding: 8px 60px;
-  border-radius: 6px;
-  box-shadow: 0 0px 10px rgba(0,0,0,0.3);
-}
-
-.uk-card .head-item h3{
-  color: #fff;
-  margin-bottom: 0;
-}
-
-.forgot-password {
-  color: #999;
-}
 
 /*.card-image {*/
-  /*background-image: url(../images/image_2017-10-22_13-57-03.png);*/
+  /*background-image: url(../images/default-image-for-lot.png);*/
 /*}*/

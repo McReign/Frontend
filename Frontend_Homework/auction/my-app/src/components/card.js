@@ -1,28 +1,38 @@
 import React from 'react';
-//import PropTypes from 'prop-types'
-import _image from '../images/image_2017-10-22_13-57-03.png'
+import PropTypes from 'prop-types'
 import PrimaryBtn from './primary-btn';
+import {Component} from "react/cjs/react.production.min";
 
-export default function Card(){
+export default class Card extends Component{
+  constructor(props) {
+    super(props);
+  }
+  render(){
     return (
         <div className="uk-child-width-1-6@m">
-            <div className="uk-card uk-card-hover uk-card-default">
-                <div className="uk-card-media-top card-image"></div>
-                <div className="uk-card-body">
-                    
-                    <div className="info">
-                        <h1 className="uk-card-title">Name of lot</h1>
-                        <p>Current price : <span>4100$</span></p>
-                        <p>Time till end : <span>2:41</span></p>
-                        <PrimaryBtn title = "Place a bet" />
-                    </div>
-                </div>
+          <div className="uk-card uk-card-hover uk-card-default">
+            <div className="uk-card-media-top card-image">
+              <img src={this.props.image} alt=""/>
             </div>
+            <div className="uk-card-body">
+              <div className="info">
+                <h1 className="uk-card-title">{this.props.name}</h1>
+                <p>Current price : <span>{this.props.price}</span></p>
+                <p>Time till end : <span>{this.props.timeTillEnd}</span></p>
+                <PrimaryBtn title = {"Learn more"} />
+              </div>
+            </div>
+          </div>
         </div>
     );
   };
+  }
+
 
   Card.defaultProps = {
-    image: _image
+    image: require('../images/default-image-for-lot.png'),
+    name: 'Some lot',
+    price: 0,
+    timeTillEnd: 0
 }
 
