@@ -50,13 +50,13 @@ a:hover {
  */
 a,
 .uk-link {
-  color: #1e87f0;
+  color: #fff;
   text-decoration: none;
   cursor: pointer;
 }
 a:hover,
 .uk-link:hover {
-  color: #0f6ecd;
+  color: #fff;
   text-decoration: underline;
 }
 /* Text-level semantics
@@ -220,7 +220,7 @@ figure {
 * + address,
 * + fieldset,
 * + figure {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 /* Headings
  ========================================================================== */
@@ -2766,7 +2766,7 @@ select.uk-form-width-xsmall {
 /* Desktop and bigger */
 @media (min-width: 320px) {
   .uk-card-body {
-    padding: 20px 20px;
+    padding: 20px 20px 4px 20px;
     line-height: 20px;
   }
   .uk-card-header {
@@ -4272,7 +4272,7 @@ ul.uk-nav-sub {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   /* 2 */
-  margin-left: -20px;
+  /*margin-left: -20px;*/
   /* 3 */
   padding: 0;
   list-style: none;
@@ -4288,8 +4288,6 @@ ul.uk-nav-sub {
   -webkit-flex: none;
   flex: none;
   /* 2 */
-  padding-left: 20px;
-  /* 3 */
   position: relative;
 }
 /* Items
@@ -4351,13 +4349,12 @@ ul.uk-nav-sub {
 /* Pill modifier
  ========================================================================== */
 .uk-subnav-pill > * > :first-child {
-  padding: 5px 10px;
+  padding: 8px 20px;
   background: transparent;
   color: #999;
 }
 /* Hover + Focus */
-.uk-subnav-pill > * > a:hover,
-.uk-subnav-pill > * > a:focus {
+.uk-subnav-pill > * > a:hover {
   background-color: #f8f8f8;
   color: #666;
 }

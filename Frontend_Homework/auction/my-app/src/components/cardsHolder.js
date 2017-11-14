@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Card from './card';
 import {Component} from "react/cjs/react.production.min";
 
@@ -9,6 +8,7 @@ export default class CardsHolder extends Component{
   }
   render(){
     return (
+
         <div className="card-holder">
           {this.props.data.map((dataField, index) =>
               <Card {...dataField} />
