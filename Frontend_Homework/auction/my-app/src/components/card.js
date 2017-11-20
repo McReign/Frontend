@@ -34,7 +34,7 @@ export default class Card extends Component{
   Card.defaultProps = {
     image: require('../images/default-image-for-lot.png'),
     name: 'Some lot',
-    price: 0,
+    price: 0 + '$',
     timeTillEnd: 0,
     dateOfEnd: '01.01.2034 00:00'
 }

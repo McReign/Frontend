@@ -2746,7 +2746,7 @@ select.uk-form-width-xsmall {
 .uk-card {
   width: 380px;
   position: relative;
-  margin: 20px;
+  margin: 11px;
   box-sizing: border-box;
   -webkit-transition: box-shadow 0.1s ease-in-out;
   transition: box-shadow 0.1s ease-in-out;
@@ -6705,7 +6705,7 @@ ul.uk-nav-sub {
     width: 20%;
   }
   .uk-child-width-1-6\@m > * {
-    width: 230px;
+    width: 240px;
   }
   .uk-child-width-auto\@m > * {
     width: auto;

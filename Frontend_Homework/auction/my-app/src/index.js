@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import LotPage from './containers/LotPage';
-import Account from './containers/Account';
+import LotPage from './containers/LotPage/LotPage';
+import Account from './containers/Account/Account';
 
 ReactDOM.render((
     <Router>
