@@ -100,11 +100,11 @@
 
 .card-holder {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 260px);
+  grid-template-columns: repeat(auto-fill, 240px);
   grid-gap: 30px 40px;
   align-items: center;
   justify-content: center;
-  padding-top: 38px;
+  padding: 38px 80px 38px 80px;
 }
 
 .account-lots {
@@ -113,9 +113,10 @@
 
 .account-lots .card-holder {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 260px);
-  justify-content: center;
-  padding-top: 8px;
+  grid-template-columns: repeat(auto-fill, 240px);
+  justify-content: left;
+  padding: 0;
+  padding-top: 12px;
 }
 
 .card-image {
@@ -143,7 +144,7 @@
 }
 
 .uk-subnav {
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .uk-subnav > * {
