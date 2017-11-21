@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import user from '../containers/LotPage/reducers'
-import lots from '../containers/Account/reducers'
+import userReducer from '../containers/LotPage/reducers'
+import lotsReducer from '../containers/Account/reducers'
 
 export default combineReducers({
-  userState,
-  lotsState
+  userState: userReducer,
+  lotsState: lotsReducer 
 })

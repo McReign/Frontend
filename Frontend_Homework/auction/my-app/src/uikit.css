@@ -2744,7 +2744,7 @@ select.uk-form-width-xsmall {
    Component: Card
  ========================================================================== */
 .uk-card {
-  width: 380px;
+  /* width: 380px; */
   position: relative;
   margin: 11px;
   box-sizing: border-box;
@@ -6705,7 +6705,7 @@ ul.uk-nav-sub {
     width: 20%;
   }
   .uk-child-width-1-6\@m > * {
-    width: 240px;
+    width: 100%;
   }
   .uk-child-width-auto\@m > * {
     width: auto;
