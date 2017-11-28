@@ -1,8 +1,8 @@
 import React from 'react';
-import Card from './card';
+import Card from '../../components/card';
 import {Component} from "react/cjs/react.production.min";
 
-export default class CardsHolder extends Component{
+class CardsHolder extends Component{
   constructor(props) {
     super(props)
   }
@@ -17,3 +17,11 @@ export default class CardsHolder extends Component{
     );
   }
 }
+
+function mapStateToProps (state) {
+    return {
+        lots: state.lots
+    }
+}
+
+export default CardsHolder

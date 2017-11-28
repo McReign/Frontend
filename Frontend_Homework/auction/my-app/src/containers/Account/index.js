@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../../components/header';
+import Header from '../Header/index';
 import Card from "../../components/card";
 import SuccessBtn from "../../components/success-btn"
 

@@ -1,14 +1,28 @@
-import { GET_CURRENT_USER, UPDATE_MONEY} from "./actions";
-import { fromJS } from 'immutable';
-
-export function userReducer(state, {type, payload}) {
-
-  switch(type){
-    case GET_CURRENT_USER:
-      return state.set('user', {name: 'Ilya', money: 100})
-    case UPDATE_MONEY:
-      return state.setIn(['user', 'money'], payload)
-  }
-
-  return fromJS({user: null})
-}
+// import {PLACE_BET} from "./actions";
+//
+// const initialState = {
+//     autorId: 0,
+//     authorName: '',
+//     description: '',
+//     expires: 0,
+//     betsCount: 0
+// }
+//
+// export default function lotsReducer(state = initialState, {type, payload}) {
+//
+//     switch(type){
+//         case PLACE_BET:
+//             return {
+//                 ... state,
+//                 state.betsCount ++
+//             }
+//     }
+//
+//     return {
+//         autorId: null,
+//         authorName: null,
+//         description: null,
+//         expires: null,
+//         betsCount: null
+//     }
+// }

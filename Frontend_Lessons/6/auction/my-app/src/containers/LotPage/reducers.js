@@ -1,10 +1,10 @@
-import { 
+import {
     GET_LOTS_START,
     GET_LOTS_SUCCESS,
     GET_LOTS_FAILED
 } from "./actions";
 
-function userReducer(state, {type, payload}) {
+function lotsReducer(state, {type, payload}) {
 
     if(type === GET_LOTS_START) {
         return {
@@ -36,4 +36,4 @@ function userReducer(state, {type, payload}) {
 }
 }
 
-export default userReducer
+export default lotsReducer

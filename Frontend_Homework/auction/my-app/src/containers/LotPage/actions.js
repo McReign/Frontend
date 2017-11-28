@@ -1,7 +1,8 @@
-export const GET_CURRENT_USER = 'GET_CURRENT_USER';
+export const PLACE_BET = 'PLACE_BET';
 
-export const UPDATE_MONEY = 'UPDATE_MONEY';
-
-export const getCurrentUser = () => ({type: GET_CURRENT_USER})
-
-export const updateMoney = (amount) => ({type: UPDATE_MONEY, payload: amount})
+export const placeBet = (lotId, amount) => {
+    return {
+        type: PLACE_BET,
+        payload: {lotId, amount}
+    }
+}

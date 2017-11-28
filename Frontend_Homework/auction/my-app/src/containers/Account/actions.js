@@ -1,7 +1,17 @@
-export const GET_AVALIABLE_LOTS = 'GET_AVALIABLE_LOTS';
+export const GET_AVALIABLE_OWNLOTS = 'GET_AVALIABLE_OWNLOTS';
 
-export const PLACE_BET = 'PLACE_BET';
+export const getAvaliableOwnlots = () => {
+    return {
+        type: GET_AVALIABLE_OWNLOTS
+    }
+}
 
-export const getAvaliableLots = () => ({type: GET_AVALIABLE_LOTS})
 
-export const placeBet = (lotId, amount) => ({type: PLACE_BET, payload: {lotId, amount}})
+export const GET_AVALIABLE_BETTEDLOTS = 'GET_AVALIABLE_BETTEDLOTS';
+
+export const getAvaliableBettedlots = () => {
+    return {
+        type: GET_AVALIABLE_BETTEDLOTS
+    }
+}
+

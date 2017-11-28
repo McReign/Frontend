@@ -4,8 +4,8 @@ import config from '../../config';
 
 function * getLotsSaga() {
     while (true) {
-    try  {     
-    yield take(GET_LOTS_START)
+    try  {
+      yield take(GET_LOTS_START)
       const lots = yield call(getLots)
       yield put(getLotsSuccess(lots))
     } catch(e) {
@@ -18,7 +18,8 @@ function getLots(id) {
     return fetch(`${config.API_BASE_URL}/lots`)
     .then(res => {
         if(res.ok) {
-            return res.json()
+            let lots = res.json().map(lot => (lot.autorId === id))
+            return lots.json()
         }
         return Promise.reject(res.status)
     })

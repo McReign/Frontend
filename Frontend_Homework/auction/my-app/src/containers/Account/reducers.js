@@ -1,22 +1,23 @@
-import { GET_AVALIABLE_LOTS, PLACE_BET} from "./actions";
-import { fromJS } from 'immutable';
+import {GET_AVALIABLE_BETTEDLOTS,
+        GET_AVALIABLE_OWNLOTS} from "./actions";
 
-export function lotsReducer(state, {type, payload}) {
+const initialState = {
+    name: '',
+    account: 0,
+    ownLots: [],
+    bettedLots: []
+}
 
-  switch(type){
-    case GET_AVALIABLE_LOTS: (state, payload)
-      return state.set('lots', {id: 1, text: 'lot1', betsCount: 100, minBet: 60})
-    case PLACE_BET: (state, {lotId, amount})
-      const currentLots = state.get('lots')
-      return state.set('lots', currentLots.map(lot => {
-        if(lot.id === lotId){
-          if(amount === lot.minBet){
-            return Object.assign({}, lot, {betsCount: lot.betsCount + 1})
-          }
-        }
-      }))
-      return lots
-  }
+export default function userReducer(state = initialState, {type, payload}) {
 
-  return fromJS({lots: null})
+    switch(type){
+        case GET_AVALIABLE_OWNLOTS:
+            return state.ownLots
+
+        case GET_AVALIABLE_BETTEDLOTS:
+            return state.bettedLots
+    }
+
+    return {ownLots: null,
+            bettedLots: null}
 }
