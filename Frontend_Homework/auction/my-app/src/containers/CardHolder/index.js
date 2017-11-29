@@ -1,6 +1,8 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import Card from '../../components/card';
 import {Component} from "react/cjs/react.production.min";
+import {getLots} from './actions'
 
 class CardsHolder extends Component{
   constructor(props) {
@@ -18,10 +20,16 @@ class CardsHolder extends Component{
   }
 }
 
-function mapStateToProps (state) {
+function mapStateToProps(state) {
     return {
-        lots: state.lots
+        lots: state.lotsState
     }
 }
 
-export default CardsHolder
+function mapDispatchToProps(dispatch) {
+    return {
+        getLots: () => dispatch(getLots())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CardsHolder)

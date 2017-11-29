@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../Header/index';
+import Header from '../Header';
 import CardInfo from '../../components/card-info';
 
 class LotPage extends Component {
@@ -13,6 +13,12 @@ class LotPage extends Component {
         </div>
     );
   }
+}
+
+function mapStateToProps(state) {
+    return {
+        lotInfo: state.lot
+    }
 }
 
 export default LotPage;

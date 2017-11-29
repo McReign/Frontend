@@ -1,28 +1,18 @@
-// import {PLACE_BET} from "./actions";
-//
-// const initialState = {
-//     autorId: 0,
-//     authorName: '',
-//     description: '',
-//     expires: 0,
-//     betsCount: 0
-// }
-//
-// export default function lotsReducer(state = initialState, {type, payload}) {
-//
-//     switch(type){
-//         case PLACE_BET:
-//             return {
-//                 ... state,
-//                 state.betsCount ++
-//             }
-//     }
-//
-//     return {
-//         autorId: null,
-//         authorName: null,
-//         description: null,
-//         expires: null,
-//         betsCount: null
-//     }
-// }
+import {PLACE_BET} from "./actions";
+import {fromJS} from 'immutable'
+
+export default function lotReducer(state, {type, payload}) {
+
+    switch(type){
+        case PLACE_BET:
+            const currentLots = state.get('lots')
+            return
+                state.set('lots', currentLots.map(lot => {
+                    if (lot.id === payload.lotId) {
+                        return Object.assign({}, lot, {betsCount: lot.betsCount + 1})
+                    }
+                }))
+            }
+
+    return fromJS({state})
+}

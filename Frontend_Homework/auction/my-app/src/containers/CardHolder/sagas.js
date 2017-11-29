@@ -2,11 +2,11 @@ import { call, put, take } from 'redux-saga/effects';
 import { GET_LOTS_START, getLotsSuccess, getLotsFailed } from './actions'
 import config from '../../config';
 
-function* getLotsSaga() {
+export function* getLotsSaga() {
     while(true){
         try{
             yield take(GET_LOTS_START)
-            const lots = yield call(getLots)
+            const lots = yield call(getLots, 0)
             yield put(getLotsSuccess(lots))
         }
         catch(e){
@@ -26,5 +26,3 @@ function getLots(id) {
             return Promise.reject(res.status)
         })
 }
-
-export default getLotsSaga

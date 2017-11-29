@@ -4,11 +4,7 @@ import {
     GET_LOTS_FAILED
 } from "./actions";
 
-const initialState = {
-  lots: []
-}
-
-function lotsReducer(state = initialState, {type, payload}) {
+function lotsReducer(state, {type, payload}) {
 
     if(type === GET_LOTS_START) {
         return {
@@ -33,11 +29,7 @@ function lotsReducer(state = initialState, {type, payload}) {
         }
     }
 
-    return {
-        data: null,
-        pending: false,
-        error: null
-    }
+    return {state}
 }
 
 export default lotsReducer

@@ -1,12 +1,7 @@
 import {GET_AVALIABLE_BETTEDLOTS,
         GET_AVALIABLE_OWNLOTS} from "./actions";
 
-const initialState = {
-    name: '',
-    account: 0,
-    ownLots: [],
-    bettedLots: []
-}
+const initialState = {}
 
 export default function userReducer(state = initialState, {type, payload}) {
 
@@ -18,6 +13,5 @@ export default function userReducer(state = initialState, {type, payload}) {
             return state.bettedLots
     }
 
-    return {ownLots: null,
-            bettedLots: null}
+    return {state}
 }

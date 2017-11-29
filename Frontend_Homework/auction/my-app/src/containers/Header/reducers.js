@@ -2,14 +2,8 @@ import {GET_USER_FAILED,
         GET_USER_START,
         GET_USER_SUCCESS} from "./actions";
 
-const initialState = {
-    name: '',
-    account: 0,
-    ownLots: [],
-    bettedLots: []
-}
 
-export default function userReducer(state = initialState, {type, payload}) {
+export default function userReducer(state, {type, payload}) {
 
     switch(type){
         case GET_USER_START:
@@ -33,9 +27,5 @@ export default function userReducer(state = initialState, {type, payload}) {
             }
     }
 
-    return {
-        data: null,
-        pending: false,
-        error: null
-    }
+    return {state}
 }

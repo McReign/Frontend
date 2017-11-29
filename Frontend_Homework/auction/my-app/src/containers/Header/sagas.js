@@ -2,11 +2,11 @@ import { call, put, take } from 'redux-saga/effects';
 import { GET_USER_START, getUserSuccess, getUserFailed } from './actions'
 import config from '../../config';
 
-export default function* getUserSaga() {
+export function* getUserSaga() {
     while(true){
         try{
             yield take(GET_USER_START)
-            const user = yield call(getUser)
+            const user = yield call(getUser, 0)
             yield put(getUserSuccess(user))
         }
         catch(e){
